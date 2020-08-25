@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function reg(){
+				//创建xhr
+				let xhr=new XMLHttpRequest()
+				//打开链接
+				xhr.open("POST","/user/reg",true)
+				//发送请求
+				//设置请求头
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				//设置请求主题
+				let formdata=`uname=${_uname.value}&upwd=${_upwd.value}&phone=${_phone.value}`
+				xhr.send(formdata)
+				//创建监听
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4&xhr.status==200){
+						if(xhr.responseText==0){
+							alert("注册失败")
+						}else{
+							alert("注册成功")
+							location.href="./login.html"
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="_uname" placeholder="昵称"><br>
+		<input type="text" id="_upwd" placeholder="密码"><br>
+		<input type="text" id="_phone"  placeholder="填写常用手机号常用"><br>
+		<button type="button" onclick="reg()">注册</button>
+	</body>
+</html>

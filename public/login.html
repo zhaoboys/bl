@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			  function login(){
+					if(!phone.value){ alert("手机号/邮箱不可为空");return}
+					if(!upwd.value){ alert("密码不可为空");return}
+					//创建xhr
+					let xhr=new XMLHttpRequest()
+					//打开接口
+					xhr.open("GET",`/user/login/${phone.value}&${upwd.value}`)
+					//发送请求
+					xhr.send()
+					//创建监控
+					xhr.onreadystatechange=function(){
+						if(xhr.readyState==4&xhr.status==200){
+							if(xhr.responseText==0){
+								alert("登录失败")
+							}else{
+								alert("登录成功")
+							}
+						}
+					}
+				}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="phone" placeholder="你的手机号码/邮箱"><br>
+		<input type="password" id="upwd" placeholder="密码"><br>
+		<button onclick="login()">登陆</button>
+		<button><a href="./reg.html">注册</a></button>
+	</body>
+</html>
