@@ -19,9 +19,12 @@ a{text-decoration: none;}
 	
 }
 
-@media screen and (max-width:1438px) .b-warp{
-	width:999px
+
+.b-warp{
+	width: 999px;
+	margin: auto;
 }
+
 
 #main>div:first-child{
 	height: 263px;
@@ -33,6 +36,8 @@ a{text-decoration: none;}
 	height: 56px;
 	float: left;
 	width: 100%;
+	position: relative;
+	z-index: 5;
 }
 
 /* 最开始头部内容 */
@@ -151,11 +156,76 @@ a{text-decoration: none;}
 	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 
+
 .nav-user-tg{
 	line-height: 30px;
 	margin-left: 14px;
 	height: 36px;
 	width: 86px;
+	position: relative;
+	
+}
+
+.nav-user-tg>button a{
+	color: inherit;
+}
+
+
+
+.nav-user-tg>div{
+	width: 350px;
+	/* background-color: #fff; */
+	position: absolute;
+	right: -22px;
+	z-index: 6;
+	font-size: 15px;
+	display: none;
+	/* transition: 2s; */
+}
+
+.nav-user-tg:hover div{
+	display: block;
+	
+}
+
+
+
+.nav-user-tg>div>div:first-child{
+	/* background: #000; */
+	width: 10px;
+	height: 15px;
+	border: 10px solid transparent;
+	border-bottom-color: #fff;
+	position:absolute ;
+	right: 50px;
+}
+
+.nav-user-tg>div>div:last-child{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
+	background: #fff;
+	position:absolute ;
+	border-radius: 4px;
+	top: 19px;
+}
+
+.nav-user-tg>div>div:last-child>div{
+	width: 25%;
+	text-align: center;
+}
+
+.nav-user-tg>div>div:last-child>div a{
+	color: inherit;
+}
+
+.nav-user-tg>div>div:last-child img{
+	width: 40%;
+	display: block;
+	/* margin: 0; */
+	margin: auto;
+	margin-bottom: 5px;
 	
 }
 
@@ -220,6 +290,11 @@ a{text-decoration: none;}
 	color: #212121;
 	/* line-height: 66px; */
 	margin: auto;
+	transition: all 0.5s;
+}
+
+.pre-menu-item a:hover{
+	color: #73c9e5;
 }
 
 .pre-menu-item img{
@@ -260,16 +335,20 @@ a{text-decoration: none;}
 	display: inline-block;
 	color: #212121;
 	margin-right: 4px;
-	
+	transition: all 0.5s;
+}
+
+.pre-menup div a:hover{
+	color: #73c9e5;
 }
 
 .pre-menup div a span{
-	 display: inline-block;
-	 margin-left: 3px;
-	 font-size: 10px;
-	 background: #73c9e5;
-	 border-radius: 2px;
-	 color: #fff;
+	display: inline-block;
+	margin-left: 3px;
+	font-size: 10px;
+	background: #73c9e5;
+	border-radius: 2px;
+	color: #fff;
 }
 
 .pre-menup>div:last-child{
@@ -300,5 +379,17 @@ a{text-decoration: none;}
 .pre-menu-right div a span{
 	font-size: 12px;
 	margin-left: 4px;
+
+	transition: all 0.5s;
+	color: inherit;
+}
+
+.pre-menu-right div a{
+	transition: all 0.2s;
 	color: #333;
+}
+
+.pre-menu-right div a:hover{
+	color: #73c9e5;
+	
 }
