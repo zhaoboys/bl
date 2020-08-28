@@ -177,15 +177,22 @@ a{text-decoration: none;}
 	/* background-color: #fff; */
 	position: absolute;
 	right: -22px;
-	z-index: 6;
+	z-index: 5;
 	font-size: 15px;
-	display: none;
-	/* transition: 2s; */
+	/* display: none; */
+	/* 隐藏动画，但是优点缺陷 */
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s linear;
+	
 }
 
+
+
 .nav-user-tg:hover div{
-	display: block;
-	
+	/* display: block; */
+	opacity: 1;
+	visibility: initial;
 }
 
 
@@ -324,11 +331,43 @@ a{text-decoration: none;}
 	position: relative;
 }
 
+
+.pre-menup .hiddenbox{
+	width: 100px;
+	position: absolute;
+	top: -125px;
+	border:1px solid transparent;
+	border-radius: 4px;
+	background: #fff;
+	opacity: 0;
+	visibility: hidden;
+	transition: 1s;
+}
+
+.pre-menup .hiddenbox>a{
+	margin-bottom:10px ;
+}
+
+.pre-menup .hiddenbox+div{
+	/* background: #212121; */
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: -16px;
+	left: 5px;
+	border:10px solid transparent;
+	border-top-color:#fff ;
+	opacity: 0;
+	visibility: hidden;
+	transition: 1s;
+}
+
 .pre-menup div{
 	margin-left: 2px;
 	padding-top: 3px;
 	vertical-align: middle;
 	align-self: center;
+	position: relative;
 }
 
 .pre-menup div a{
@@ -336,6 +375,17 @@ a{text-decoration: none;}
 	color: #212121;
 	margin-right: 4px;
 	transition: all 0.5s;
+}
+
+/* 触发显示 */
+.hiddenbox+div:hover,.hiddenbox:hover{
+	opacity: 1;
+	visibility: visible;
+}
+
+.pre-menup div a:hover~div{
+	opacity: 1;
+	visibility: visible;
 }
 
 .pre-menup div a:hover{
