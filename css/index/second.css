@@ -1,5 +1,5 @@
 #main>div:nth-child(2){
-	height: 446px;
+	height: auto;
 }
 
 @media (max-width:1438px) {
@@ -10,6 +10,7 @@
 	
 	margin: auto;
 	width: 999px;
+	/* height:auto; */
 }
 .screen1{
 	width: 100%;
@@ -23,6 +24,11 @@
 	height: 202px;
 	background-color: #000000;
 }
+
+.ul-imgs{
+	width: 2295px;
+}
+
 
 /* 1-推荐 */
 .recommend-box{

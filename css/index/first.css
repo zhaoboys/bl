@@ -312,6 +312,9 @@ a{text-decoration: none;}
 	
 }
 
+.pre-menu-item>ul>li:last-child{
+	width: 30px;
+}
 
 .tab-line{
 	display: block;
@@ -403,7 +406,7 @@ a{text-decoration: none;}
 
 .pre-menup>div:last-child{
 	position: absolute;
-	left: 95%;
+	left: 98%;
 }
 
 
@@ -418,6 +421,7 @@ a{text-decoration: none;}
 
 .pre-menu-right div{
 	padding: 2px;
+	margin-right: 4px;
 }
 
 .pre-menu-right div a img{
